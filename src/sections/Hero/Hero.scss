@@ -1,0 +1,82 @@
+@import "../../styles/global.scss";
+
+.hero {
+  position: relative;
+  height: 100vh;  
+  min-height: 800px;
+
+  &__background {
+    object-position: 22%;
+  }
+
+  &-front {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    width: 58vw;
+
+    @include mq() {
+      left: 7%;
+      bottom: 28%;
+      width: 81vw;
+      transform: none !important;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5vw;
+    height: 90vh;
+
+    @include mq() {
+      padding: 5vw;
+    }  
+  }
+
+  &__logo {
+    width: 14vw;
+
+    @include mq() {
+      width: 36vw;
+    }
+  }
+
+  &__top-text {
+    margin-top: 2vw;
+    width: 40vw;
+
+    @include mq() {
+      width: 80vw;
+      margin-top: 4vw;
+    }
+  }
+
+  .big-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 1vw;
+    width: 70%;
+
+    @include mq() {
+      bottom: 22vw;
+      width: 90vw;
+    }
+
+    & span:last-child {
+      color: $black;
+      align-self: self-end;
+    }
+  }
+
+  &__under-title {
+    position: absolute;
+    bottom: 2vw;
+    width: 37vw;
+
+    @include mq() {
+      width: 86vw;
+    }
+  }
+}

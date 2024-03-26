@@ -1,0 +1,127 @@
+@import "../../styles/global.scss";
+
+.overview {
+  height: 70vw;
+  padding-top: 4vw;
+  position: relative;
+
+  @include mq() {
+    height: 70vh;
+    min-height: 550px;
+  }
+
+  @include mq($tablet, '>') {
+    min-height: 700px;
+  }
+
+  &__image {
+    top: -4vw;
+    height: 105%;
+
+    @include mq($tablet, '>') {
+      min-height: 800px;
+    }  
+  }
+
+  &__text {
+    text-align: center;
+    padding: 2vw 15vw;
+    background-color: $black;
+  }
+
+  &__part {
+    position: absolute;
+    width: 12vw;
+
+    @include mq() {
+      width: 16vw;
+    }
+
+    &-1 {
+      width: 13vw;
+      top: 2vw;
+      left: 3vw;
+
+      @include mq() {
+        width: 18vw;
+        top: 0;
+      }
+    }
+    
+    &-2 {
+      top: 3vw;
+      right: 1.5vw;
+
+      @include mq() {
+        top: -5vw;
+        right: 3vw;
+      }
+    }
+   
+    &-3 {
+      bottom: -1vw;
+      left: 2vw;
+    }
+    
+    &-4 {
+      bottom: 0;
+      right: 2vw;
+
+      @include mq() {
+        right: 5vw;
+      }
+    }
+  }
+
+  .portal {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mq($phablet) {
+      top: 65%;
+    }
+
+    @include mq($phablet, '>') {
+      top: 75%;
+    }
+
+    &__main {
+      width: 50vw;
+
+      @include mq($phablet) {
+        width: 70vw;
+      }
+    }
+
+    &-peace {
+      position: absolute;
+        width: 5vw;
+
+        @include mq($phablet) {
+          width: 10vw;
+        }
+
+      &-1 {
+        left: 11vw;
+        top: 1vw;
+
+        @include mq($phablet) {
+          top: -2vw;
+          left: 14vw;
+        }
+      }
+      
+      &-2 {
+        right: 13vw;
+        top: -4vw;
+
+        @include mq($phablet) {
+          top: -11vw;
+          right: 15vw;
+        }
+      }
+    }
+  }
+}

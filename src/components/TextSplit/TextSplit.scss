@@ -1,0 +1,18 @@
+@import "../../styles/global.scss";
+
+.text_split {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq() {
+    justify-content: center;
+  }
+  
+  &__mask {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    text-wrap: nowrap;
+  }
+}

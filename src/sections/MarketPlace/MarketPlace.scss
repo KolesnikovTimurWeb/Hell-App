@@ -1,0 +1,70 @@
+@import "@/styles/global.scss";
+
+.marketplace {
+  &__background {
+    background: $shadow;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding-top: 5vw;
+
+    @include mq() {
+      padding-top: 8vw;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+
+    margin-bottom: 3vw;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70vw;
+    gap: 2vw;
+    margin: 0 auto 2vw;
+  }
+  &__image {
+    & img {
+      height: 26vw;
+      width: 16vw;
+    }
+  }
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-around;
+  max-width: 87vw;
+  margin: 0 auto;
+  padding-bottom: 15vw;
+
+  @include mq() {
+    flex-direction: column;
+  }
+}
+
+.side {
+  width: 48%;
+
+  @include mq() {
+    width: 100%;
+
+  }
+  
+  & li {
+    border: 1px solid $grey-main;
+    padding: 1vw 0 1vw 2vw;
+  }
+}

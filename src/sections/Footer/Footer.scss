@@ -1,0 +1,95 @@
+@import "../../styles/global.scss";
+
+.footer {
+  background-color: $red-transparent;
+  padding: 2vw 5vw;
+  position: relative;
+
+  @include mq() {
+    padding: 4vw 7vw;
+    height: 30vh;
+    min-height: 220px;
+  }
+
+  &__content {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+
+    @include mq() {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 15vw;
+
+    @include mq() {
+      width: 34vw;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1vw;
+
+    @include mq() {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font: inherit;
+    color: $grey-main;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2vw;
+
+    @include mq() {
+      gap: 4vw;
+    }
+
+    & img {
+      width: 2vw;
+      transition: all 0.2s ease-in-out;
+
+      @include mq() {
+        width: 7vw;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__main-devil {
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    width: 45%;
+
+    @include mq() {
+      width: 65%;
+    }
+  }
+
+  &__top-devil {
+    position: absolute;
+    top: -14.5vw;
+    width: 14vw;
+
+    @include mq() {
+      width: 35vw;
+      top: -36vw;
+    }
+  }
+}

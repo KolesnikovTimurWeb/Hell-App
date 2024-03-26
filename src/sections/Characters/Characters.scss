@@ -1,0 +1,68 @@
+@import "../../styles/global.scss";
+
+.characters {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 10vw;
+
+  &__body {
+    display: flex;
+    gap: 2vw;
+    
+    @include mq() {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    width: 55%;
+    
+    @include mq() {
+      width: 100%;
+    }
+
+    &_images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2vw;
+
+      & img {
+        width: 5vw;
+
+        @include mq() {
+          width: 12vw;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: 1vw 2vw;
+    background-color: $red-main;
+  }
+
+  &__discription {
+    padding: 2vw;
+    border: 1px solid $grey-main;
+    border-width: 0 1px 1px 1px;
+
+    & p {
+      margin-bottom: 1vw;
+    }
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+
+    width: 43%;
+
+    @include mq() {
+      width: auto;
+    }
+  }
+}

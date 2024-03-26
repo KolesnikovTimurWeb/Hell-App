@@ -1,0 +1,69 @@
+@import "../../styles/global.scss";
+
+.features {
+  position: relative;
+  display: flex;
+  padding-bottom: 20vw;
+  gap: 1vw;
+
+  @include mq() {
+    flex-direction: column-reverse;
+    gap: 6vw;
+    padding-bottom: 30vw;
+  }
+
+  &__wrapper {
+    width: 55%;
+    min-height: 68vw;
+
+    @include mq() {
+      width: 100%;
+      min-height: 100vw;
+    }
+  }
+
+  &__list {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $grey-main;
+      background-color: $black-transparent;
+      font-family: Chakra Petch, sans-serif;
+    }
+
+    &-title {
+      padding: 2vw;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $red-main;
+      }
+
+      &--active {
+        background-color: $red-main;
+        border-bottom: 1px solid $grey-main;
+      }
+    }
+
+    &-text {
+      color: $grey-main;
+    }
+  }
+
+  &__download {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: 4vw;
+    width: 43%;
+
+    @include mq() {
+      width: 100%;
+    }
+  
+    &_image {
+      width: 100%;
+    }
+  }
+}
